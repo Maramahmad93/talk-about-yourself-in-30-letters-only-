@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Talk About Yourself</title>
+	<style type="text/css">
+		div{
+			margin: 200px;
+			width: 450px;
+			border: 5px solid #33ccff;
+			padding:20px;
+		}	
+
+		textarea{
+			border-color: #33ffcc;
+			width: 400px;
+			text-align: center;
+		}
+		button{
+			border-color: #33ccff;
+			background-color: #000;
+			color:#fff;
+
+             
+		}
+
+		h3{
+			color:#33ccff;
+
+		}
+	</style>
+
+</head>
+<body>
+
+	<div>
+		<h3>Talk About Yourself in 30 Letters only </h3>
+		<hr style="background-color: #33ccff">
+		<h3 id="letterCount" style="color:red"></h3>
+		<textarea onkeypress="pressFun()" id="talk" style="color: red"></textarea>
+		<button id="send" style="display: none;">Send</button>
+	</div>
+
+
+	<script type="text/javascript">
+
+
+		var counter = 0 ; 
+		function pressFun(){
+			counter++ ;
+			document.getElementById("letterCount").innerHTML = "The Letter Counter = " + counter; 
+			if (counter == 30 ) {
+				document.getElementById("send").style.display = "inline-block";
+				document.getElementById("talk").disabled = true;
+			}
+		}	
+
+
+
+	</script>
+
+</body>
+</html>
